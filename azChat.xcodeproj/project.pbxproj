@@ -15,7 +15,7 @@
 		DF15F9BC1FDB3AA600D8C1E9 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F9BB1FDB3AA600D8C1E9 /* ChannelVC.swift */; };
 		DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F9BD1FDB3BAA00D8C1E9 /* MainWindowController.swift */; };
 		DF15F9C11FDB3C4D00D8C1E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */; };
-		DF322E5B1FDC063B00C65A8F /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF322E5A1FDC063B00C65A8F /* NSButton.swift */; };
+		DF1E1A121FDC127F007F5031 /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E1A111FDC127F007F5031 /* NSButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		DF15F9BB1FDB3AA600D8C1E9 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		DF15F9BD1FDB3BAA00D8C1E9 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DF322E5A1FDC063B00C65A8F /* NSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSButton.swift; path = ../../../Weathered/Weathered/Extensions/NSButton.swift; sourceTree = "<group>"; };
+		DF1E1A111FDC127F007F5031 /* NSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 		DF15F9BF1FDB3C3100D8C1E9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DF1E1A111FDC127F007F5031 /* NSButton.swift */,
 				DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */,
-				DF322E5A1FDC063B00C65A8F /* NSButton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				DF15F99D1FDB371B00D8C1E9 /* AppDelegate.swift in Sources */,
 				DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */,
 				DF15F9C11FDB3C4D00D8C1E9 /* Constants.swift in Sources */,
-				DF322E5B1FDC063B00C65A8F /* NSButton.swift in Sources */,
+				DF1E1A121FDC127F007F5031 /* NSButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
