@@ -11,3 +11,7 @@ import Cocoa
 // Colors
 let chatPurple = NSColor(calibratedRed: 197/255, green: 227/255, blue: 245/255, alpha: 1.00)
 let chatGreen = NSColor(calibratedRed: 245/255, green: 133/255, blue: 50/255, alpha: 1.00)
+
+// Fonts
+let AVENIR_REGULAR = "AvenirNext-Regular"
+let AVENIR_BOLD = "AvenirNext-Bold"
