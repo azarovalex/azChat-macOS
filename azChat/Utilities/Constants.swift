@@ -15,3 +15,7 @@ let chatGreen = NSColor(calibratedRed: 245/255, green: 133/255, blue: 50/255, al
 // Fonts
 let AVENIR_REGULAR = "AvenirNext-Regular"
 let AVENIR_BOLD = "AvenirNext-Bold"
+
+// Notification Constants
+let USER_INFO_MODAL = "modalUserInfo"
+let NOTIF_PRESENT_MODAL = Notification.Name("presentModal")
