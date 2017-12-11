@@ -731,7 +731,7 @@
                                         <rect key="frame" x="30" y="0.0" width="38" height="23"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Login" id="SOW-cO-hz2">
                                             <font key="font" size="13" name="AvenirNext-Regular"/>
-                                            <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" red="0.37142802773560191" green="0.37083287874609555" blue="0.38122864916692056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>

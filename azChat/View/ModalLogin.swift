@@ -12,11 +12,15 @@ class ModalLogin: NSView {
 
     // Outlets
     @IBOutlet weak var view: NSView!
+    @IBOutlet weak var userNameTxt: NSTextField!
+    @IBOutlet weak var passwordTxt: NSSecureTextField!
+    @IBOutlet weak var loginButton: NSButton!
+    @IBOutlet weak var createAccountBtn: NSButton!
+    @IBOutlet weak var stackView: NSStackView!
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         Bundle.main.loadNibNamed(NSNib.Name(rawValue: "ModalLogin"), owner: self, topLevelObjects: nil)
-        self.view.frame = NSRect(x: 0, y: 0, width: 475, height: 300)
         self.addSubview(self.view)
     }
     
@@ -30,8 +34,24 @@ class ModalLogin: NSView {
     }
     
     func setUpView() {
+        self.view.frame = NSRect(x: 0, y: 0, width: 475, height: 300)
         view.wantsLayer = true
         view.layer?.backgroundColor = CGColor.white
         view.layer?.cornerRadius = 7
+        
+        loginButton.layer?.backgroundColor = chatGreen.cgColor
+        loginButton.layer?.cornerRadius = 7
+        loginButton.styleButtonText(button: loginButton, buttonName: "Login", fontColor: NSColor.darkGray, alignment: .center, font: AVENIR_REGULAR, size: 14)
+        
+        createAccountBtn.styleButtonText(button: createAccountBtn, buttonName: "Create Account", fontColor: chatGreen, alignment: .center, font: AVENIR_REGULAR, size: 12)
+    }
+    
+    @IBAction func closeModalClicked(_ sender: Any) {
+    }
+    
+    @IBAction func loginBtnClicked(_ sender: Any) {
+    }
+    
+    @IBAction func createAccountBtnClicked(_ sender: Any) {
     }
 }
