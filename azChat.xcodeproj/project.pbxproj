@@ -19,6 +19,7 @@
 		DF6DA6401FDD898200338F7C /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6DA63F1FDD898200338F7C /* NSButton.swift */; };
 		DFBC5CE71FDD9A3E0089A6DD /* ModalLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */; };
 		DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */; };
+		DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5D231FDF1B380089A6DD /* NSColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DF6DA63F1FDD898200338F7C /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
 		DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLogin.xib; sourceTree = "<group>"; };
 		DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLogin.swift; sourceTree = "<group>"; };
+		DFBC5D231FDF1B380089A6DD /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */,
 				DF6DA63F1FDD898200338F7C /* NSButton.swift */,
+				DFBC5D231FDF1B380089A6DD /* NSColor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				DF15F9B01FDB3A3400D8C1E9 /* ToolbarVC.swift in Sources */,
 				DF15F99D1FDB371B00D8C1E9 /* AppDelegate.swift in Sources */,
 				DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */,
+				DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */,
 				DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */,
 				DF6DA6401FDD898200338F7C /* NSButton.swift in Sources */,
 				DF15F9C11FDB3C4D00D8C1E9 /* Constants.swift in Sources */,

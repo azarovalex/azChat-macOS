@@ -832,7 +832,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="221"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
-                                            <color key="backgroundColor" red="0.77254901960784317" green="0.8901960784313725" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="1" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn identifier="" width="197" minWidth="40" maxWidth="1000" id="CyM-bw-79S">

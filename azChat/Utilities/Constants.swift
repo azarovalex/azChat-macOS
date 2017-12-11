@@ -9,8 +9,10 @@
 import Cocoa
 
 // Colors
-let chatPurple = NSColor(calibratedRed: 197/255, green: 227/255, blue: 245/255, alpha: 1.00)
-let chatGreen = NSColor(calibratedRed: 245/255, green: 133/255, blue: 50/255, alpha: 1.00)
+// let chatPurple = NSColor.hexColor(rgbValue: 0xffebee)
+let chatPurple = NSColor(calibratedRed: 255/255, green: 0xeb/0xff, blue: 0xee/0xff, alpha: 1)
+
+let chatGreen = NSColor.hexColor(rgbValue: 0xe57373)
 
 // Fonts
 let AVENIR_REGULAR = "AvenirNext-Regular"
@@ -19,3 +21,5 @@ let AVENIR_BOLD = "AvenirNext-Bold"
 // Notification Constants
 let USER_INFO_MODAL = "modalUserInfo"
 let NOTIF_PRESENT_MODAL = Notification.Name("presentModal")
+let NOTIF_CLOSE_MODAL = Notification.Name("closeModal")
+let USER_INFO_REMOVE_IMMEDIATELY = "modalRemoveImmediately"
