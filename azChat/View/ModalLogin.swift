@@ -46,6 +46,7 @@ class ModalLogin: NSView {
         createAccountBtn.styleButtonText(button: createAccountBtn, buttonName: "Create Account", fontColor: chatGreen, alignment: .center, font: AVENIR_REGULAR, size: 12)
     }
     
+    
     @IBAction func closeModalClicked(_ sender: Any) {
         NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil)
     }
@@ -56,5 +57,7 @@ class ModalLogin: NSView {
     @IBAction func createAccountBtnClicked(_ sender: Any) {
         let closeImmediatelyDict: [String: Bool] = [USER_INFO_REMOVE_IMMEDIATELY: true]
         NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil, userInfo: closeImmediatelyDict)
+        let createAccountDict: [String: ModalType] = [USER_INFO_MODAL: ModalType.createAccount]
+        NotificationCenter.default.post(name: NOTIF_PRESENT_MODAL, object: nil, userInfo:createAccountDict)
     }
 }
