@@ -700,7 +700,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-72" y="172"/>
         </scene>
         <!--ToolbarVC-->
         <scene sceneID="hIz-AP-VOD">
@@ -788,7 +788,7 @@
                 </splitViewController>
                 <customObject id="S6p-C5-obJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1081"/>
+            <point key="canvasLocation" x="-34" y="1306"/>
         </scene>
         <!--ChannelVC-->
         <scene sceneID="1tG-Pu-1pO">
