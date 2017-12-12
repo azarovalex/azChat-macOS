@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A76534E08A3A067CFBBD3DB /* Pods_azChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD08CA9ECE6DEBB86C76BAB /* Pods_azChat.framework */; };
 		DF15F99D1FDB371B00D8C1E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F99C1FDB371B00D8C1E9 /* AppDelegate.swift */; };
 		DF15F9A11FDB371B00D8C1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF15F9A01FDB371B00D8C1E9 /* Assets.xcassets */; };
 		DF15F9A41FDB371B00D8C1E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF15F9A21FDB371B00D8C1E9 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		DF15F9BC1FDB3AA600D8C1E9 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F9BB1FDB3AA600D8C1E9 /* ChannelVC.swift */; };
 		DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F9BD1FDB3BAA00D8C1E9 /* MainWindowController.swift */; };
 		DF15F9C11FDB3C4D00D8C1E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */; };
+		DF3EFD3B1FE09A350002AA0A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3EFD3A1FE09A350002AA0A /* AuthService.swift */; };
 		DF63D93E1FDF511500E128EB /* ModalCreateAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */; };
 		DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */; };
 		DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51B841904CDA13AB50B81FEE /* Pods-azChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-azChat/Pods-azChat.debug.xcconfig"; sourceTree = "<group>"; };
+		CAD08CA9ECE6DEBB86C76BAB /* Pods_azChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_azChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF15F9991FDB371B00D8C1E9 /* azChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF15F99C1FDB371B00D8C1E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF15F9A01FDB371B00D8C1E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 		DF15F9BB1FDB3AA600D8C1E9 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		DF15F9BD1FDB3BAA00D8C1E9 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DF3EFD3A1FE09A350002AA0A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalCreateAccount.xib; sourceTree = "<group>"; };
 		DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCreateAccount.swift; sourceTree = "<group>"; };
 		DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickBlockingView.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLogin.xib; sourceTree = "<group>"; };
 		DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLogin.swift; sourceTree = "<group>"; };
 		DFBC5D231FDF1B380089A6DD /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		F28350C2297B5BB459563CE0 /* Pods-azChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-azChat/Pods-azChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,17 +56,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A76534E08A3A067CFBBD3DB /* Pods_azChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		585A0F2010C17EA1050BDE20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD08CA9ECE6DEBB86C76BAB /* Pods_azChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7A65AEE1BB55166CE020619 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51B841904CDA13AB50B81FEE /* Pods-azChat.debug.xcconfig */,
+				F28350C2297B5BB459563CE0 /* Pods-azChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DF15F9901FDB371B00D8C1E9 = {
 			isa = PBXGroup;
 			children = (
 				DF15F99B1FDB371B00D8C1E9 /* azChat */,
 				DF15F99A1FDB371B00D8C1E9 /* Products */,
+				B7A65AEE1BB55166CE020619 /* Pods */,
+				585A0F2010C17EA1050BDE20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,11 +101,12 @@
 		DF15F99B1FDB371B00D8C1E9 /* azChat */ = {
 			isa = PBXGroup;
 			children = (
-				DFBC5CE51FDD9A290089A6DD /* Xibs */,
 				DF15F9AE1FDB3A0200D8C1E9 /* Model */,
 				DF15F9AD1FDB39FD00D8C1E9 /* View */,
 				DF15F9AC1FDB39F000D8C1E9 /* Controller */,
+				DFBC5CE51FDD9A290089A6DD /* Xibs */,
 				DF15F9BF1FDB3C3100D8C1E9 /* Utilities */,
+				DF3EFD391FE09A150002AA0A /* Services */,
 				DF15F99C1FDB371B00D8C1E9 /* AppDelegate.swift */,
 				DF15F9A01FDB371B00D8C1E9 /* Assets.xcassets */,
 				DF15F9A21FDB371B00D8C1E9 /* Main.storyboard */,
@@ -127,6 +154,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		DF3EFD391FE09A150002AA0A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF3EFD3A1FE09A350002AA0A /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DFBC5CE51FDD9A290089A6DD /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF15F9A91FDB371B00D8C1E9 /* Build configuration list for PBXNativeTarget "azChat" */;
 			buildPhases = (
+				942C81E24A4EB2A9E11C5041 /* [CP] Check Pods Manifest.lock */,
 				DF15F9951FDB371B00D8C1E9 /* Sources */,
 				DF15F9961FDB371B00D8C1E9 /* Frameworks */,
 				DF15F9971FDB371B00D8C1E9 /* Resources */,
+				CE050B72183BAF19042AF30B /* [CP] Embed Pods Frameworks */,
+				5891E3110F915BCDEECBD3A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +242,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5891E3110F915BCDEECBD3A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-azChat/Pods-azChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		942C81E24A4EB2A9E11C5041 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-azChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE050B72183BAF19042AF30B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-azChat/Pods-azChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-azChat/Pods-azChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF15F9951FDB371B00D8C1E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -212,6 +310,7 @@
 				DF15F9BC1FDB3AA600D8C1E9 /* ChannelVC.swift in Sources */,
 				DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */,
 				DF15F9B61FDB3A6600D8C1E9 /* ChatVC.swift in Sources */,
+				DF3EFD3B1FE09A350002AA0A /* AuthService.swift in Sources */,
 				DF15F9B01FDB3A3400D8C1E9 /* ToolbarVC.swift in Sources */,
 				DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */,
 				DF15F99D1FDB371B00D8C1E9 /* AppDelegate.swift in Sources */,
@@ -345,9 +444,11 @@
 		};
 		DF15F9AA1FDB371B00D8C1E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B841904CDA13AB50B81FEE /* Pods-azChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = azChat/azChat.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
@@ -355,15 +456,18 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		DF15F9AB1FDB371B00D8C1E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28350C2297B5BB459563CE0 /* Pods-azChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = azChat/azChat.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
@@ -371,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.azChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
