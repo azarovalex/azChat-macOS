@@ -56,9 +56,10 @@ class ModalLogin: NSView {
             if success {
                 AuthService.instance.findUserByEmail(completion: { (success) in
                     if success {
-                        NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil )
-                        print(AuthService.instance.userEmail)
-                        print(AuthService.instance.authToken)
+                                NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil)
+                                print(UserDataService.instance.avatarName)
+                                print(UserDataService.instance.email)
+                                print(UserDataService.instance.name)
                     }
                 })
             }

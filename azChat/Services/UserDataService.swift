@@ -40,7 +40,7 @@ class UserDataService {
             return _avatarName
         }
         set {
-            _avatarColor = newValue
+            _avatarName = newValue
         }
     }
     
