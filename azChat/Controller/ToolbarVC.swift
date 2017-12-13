@@ -129,7 +129,9 @@ class ToolbarVC: NSViewController {
                 self.modalBGView.removeFromSuperview()
                 self.modalBGView = nil
                 self.modalView.removeFromSuperview()
-            }})
+                self.modalView = nil
+            }
+        })
         }
     }
     
