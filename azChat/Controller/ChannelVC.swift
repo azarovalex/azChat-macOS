@@ -21,6 +21,7 @@ class ChannelVC: NSViewController {
     
     override func viewWillAppear() {
         setUpView()
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.dataDidChange(_:)), name: NOTIF_DATA_CHANGED, object: nil)
     }
     
     func setUpView() {
@@ -33,4 +34,11 @@ class ChannelVC: NSViewController {
         
     }
     
+    @objc func dataDidChange(_ nofif: Notification) {
+        if AuthService.instance.isLoggedIn {
+            usernameLbl.stringValue = UserDataService.instance.name
+        } else {
+            usernameLbl.stringValue = ""
+        }
+    }
 }

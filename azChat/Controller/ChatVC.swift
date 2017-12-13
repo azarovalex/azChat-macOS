@@ -29,6 +29,8 @@ class ChatVC: NSViewController {
     }
     
     func setUpView() {
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.dataDidChange(_:)), name: NOTIF_DATA_CHANGED, object: nil)
+        
         view.wantsLayer = true
         view.layer?.backgroundColor = CGColor.white
         
@@ -43,6 +45,14 @@ class ChatVC: NSViewController {
     
     @IBAction func sendMessageBtnClicked(_ sender: Any) {
         
+    }
+    
+    @objc func dataDidChange(_ nofif: Notification) {
+        if AuthService.instance.isLoggedIn {
+            
+        } else {
+            
+        }
     }
     
 }

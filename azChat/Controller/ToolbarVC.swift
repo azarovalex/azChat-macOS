@@ -35,6 +35,7 @@ class ToolbarVC: NSViewController {
     func setUpView() {
         NotificationCenter.default.addObserver(self, selector: #selector(ToolbarVC.presentModal(_:)), name: NOTIF_PRESENT_MODAL, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ToolbarVC.closeModalNofit(_:)), name: NOTIF_CLOSE_MODAL, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ToolbarVC.dataDidChange(_:)), name: NOTIF_DATA_CHANGED, object: nil)
         
         view.wantsLayer = true
         view.layer?.backgroundColor = chatGreen.cgColor
@@ -132,6 +133,23 @@ class ToolbarVC: NSViewController {
                 self.modalView = nil
             }
         })
+        }
+    }
+    
+    @objc func dataDidChange(_ nofif: Notification) {
+        if AuthService.instance.isLoggedIn {
+            loginLbl.stringValue = UserDataService.instance.name
+            loginImg.wantsLayer = true
+            loginImg.layer?.cornerRadius = 5
+            loginImg.layer?.borderColor = NSColor.white.cgColor
+            loginImg.layer?.borderWidth = 1
+            loginImg.image = NSImage(named: NSImage.Name(rawValue: UserDataService.instance.avatarName))
+            // TODO: add avatar color
+        } else {
+            loginImg.wantsLayer = true
+            loginImg.layer?.borderWidth = 0
+            loginImg.image = NSImage(named: NSImage.Name(rawValue: "profileDefault"))
+            loginImg.layer?.backgroundColor = CGColor.clear
         }
     }
     
