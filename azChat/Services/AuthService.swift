@@ -16,7 +16,7 @@ class AuthService {
     let defaults = UserDefaults.standard
     
     var isLoggedIn: Bool {
-        get {
+        get { 
             return defaults.bool(forKey: LOGGED_IN_KEY)
         }
         set {

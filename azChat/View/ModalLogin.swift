@@ -17,6 +17,7 @@ class ModalLogin: NSView {
     @IBOutlet weak var loginButton: NSButton!
     @IBOutlet weak var createAccountBtn: NSButton!
     @IBOutlet weak var stackView: NSStackView!
+    @IBOutlet weak var progressSpinner: NSProgressIndicator!
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -46,16 +47,25 @@ class ModalLogin: NSView {
         createAccountBtn.styleButtonText(button: createAccountBtn, buttonName: "Create Account", fontColor: chatGreen, alignment: .center, font: AVENIR_REGULAR, size: 12)
     }
     
+    @IBAction func enterPasswordSent(_ sender: Any) {
+        loginButton.performClick(nil)
+    }
     
     @IBAction func closeModalClicked(_ sender: Any) {
         NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil)
     }
     
     @IBAction func loginBtnClicked(_ sender: Any) {
+        progressSpinner.isHidden = false
+        progressSpinner.startAnimation(nil)
+        stackView.alphaValue = 0.4
+        loginButton.isEnabled = false
         AuthService.instance.loginUser(email: userNameTxt.stringValue, password: passwordTxt.stringValue) { (success) in
             if success {
                 AuthService.instance.findUserByEmail(completion: { (success) in
                     if success {
+                        self.progressSpinner.stopAnimation(nil)
+                        self.progressSpinner.isHidden = true
                         NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil)
                         NotificationCenter.default.post(name: NOTIF_DATA_CHANGED, object: nil)
                     }

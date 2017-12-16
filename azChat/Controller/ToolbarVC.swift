@@ -11,6 +11,7 @@ import Cocoa
 enum ModalType{
     case logIn
     case createAccount
+    case profile
 }
 
 class ToolbarVC: NSViewController {
@@ -30,6 +31,11 @@ class ToolbarVC: NSViewController {
     
     override func viewWillAppear() {
         setUpView()
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUserByEmail(completion: { (success) in
+                NotificationCenter.default.post(name: NOTIF_DATA_CHANGED, object: nil)
+            })
+        }
     }
     
     func setUpView() {
@@ -46,8 +52,13 @@ class ToolbarVC: NSViewController {
     }
     
     @objc func openProfilePage(_ recognizer: NSClickGestureRecognizer) {
-        let loginDict: [String: ModalType] = [USER_INFO_MODAL: ModalType.logIn]
-        NotificationCenter.default.post(name: NOTIF_PRESENT_MODAL, object: nil, userInfo: loginDict)
+        if AuthService.instance.isLoggedIn {
+            let profileDict: [String: ModalType] = [USER_INFO_MODAL: ModalType.profile]
+            NotificationCenter.default.post(name: NOTIF_PRESENT_MODAL, object: nil, userInfo: profileDict)
+        } else {
+            let loginDict: [String: ModalType] = [USER_INFO_MODAL: ModalType.logIn]
+            NotificationCenter.default.post(name: NOTIF_PRESENT_MODAL, object: nil, userInfo: loginDict)
+        }
         
     }
     
@@ -81,6 +92,10 @@ class ToolbarVC: NSViewController {
             modalHeight = 300
         case ModalType.createAccount:
             modalView = ModalCreateAccount()
+            modalWidth = 475
+            modalHeight = 300
+        case ModalType.profile:
+            modalView = ModalProfile()
             modalWidth = 475
             modalHeight = 300
         }
@@ -136,6 +151,7 @@ class ToolbarVC: NSViewController {
         }
     }
     
+    
     @objc func dataDidChange(_ nofif: Notification) {
         if AuthService.instance.isLoggedIn {
             loginLbl.stringValue = UserDataService.instance.name
@@ -146,6 +162,7 @@ class ToolbarVC: NSViewController {
             loginImg.image = NSImage(named: NSImage.Name(rawValue: UserDataService.instance.avatarName))
             // TODO: add avatar color
         } else {
+            loginLbl.stringValue = "Login"
             loginImg.wantsLayer = true
             loginImg.layer?.borderWidth = 0
             loginImg.image = NSImage(named: NSImage.Name(rawValue: "profileDefault"))
@@ -154,3 +171,6 @@ class ToolbarVC: NSViewController {
     }
     
 }
+
+
+

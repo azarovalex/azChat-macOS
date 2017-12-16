@@ -11,6 +11,7 @@
                 <outlet property="createAccountBtn" destination="eRW-Tw-ggU" id="28y-EY-oik"/>
                 <outlet property="loginButton" destination="K0g-ir-K4b" id="fSK-kq-CH4"/>
                 <outlet property="passwordTxt" destination="cfP-7H-rh7" id="5dt-Ql-m02"/>
+                <outlet property="progressSpinner" destination="2X3-s1-pwb" id="hLx-A6-5z5"/>
                 <outlet property="stackView" destination="NXq-qa-phH" id="8gd-13-Av0"/>
                 <outlet property="userNameTxt" destination="NMr-V0-6ZQ" id="Hjg-cJ-C7F"/>
                 <outlet property="view" destination="c22-O7-iKe" id="0So-HI-sGm"/>
@@ -99,7 +100,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="sNp-Ah-ffU"/>
                                     </constraints>
-                                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="Password" usesSingleLineMode="YES" id="wDI-jB-ejQ">
+                                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" focusRingType="none" placeholderString="Password" usesSingleLineMode="YES" id="wDI-jB-ejQ">
                                         <font key="font" size="13" name="AvenirNext-Regular"/>
                                         <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -108,6 +109,7 @@
                                         </allowedInputSourceLocales>
                                     </secureTextFieldCell>
                                     <connections>
+                                        <action selector="enterPasswordSent:" target="-2" id="sBN-bD-jic"/>
                                         <outlet property="nextKeyView" destination="NMr-V0-6ZQ" id="ND1-vn-E6b"/>
                                     </connections>
                                 </secureTextField>
@@ -154,6 +156,9 @@
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
+                <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="2X3-s1-pwb">
+                    <rect key="frame" x="222" y="134" width="32" height="32"/>
+                </progressIndicator>
             </subviews>
             <constraints>
                 <constraint firstItem="Zvc-dw-Xm0" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="6" id="4ww-L4-ENG"/>
@@ -161,7 +166,9 @@
                 <constraint firstAttribute="trailing" secondItem="Zvc-dw-Xm0" secondAttribute="trailing" constant="6" id="9TN-7v-ACQ"/>
                 <constraint firstAttribute="bottom" secondItem="eRW-Tw-ggU" secondAttribute="bottom" constant="20" id="LHx-NO-C9Z"/>
                 <constraint firstItem="NXq-qa-phH" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="bHi-nJ-n4O"/>
+                <constraint firstItem="2X3-s1-pwb" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="gCh-Pt-oEL"/>
                 <constraint firstItem="NXq-qa-phH" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="vqu-eD-gmg"/>
+                <constraint firstItem="2X3-s1-pwb" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="yoE-cn-bRZ"/>
             </constraints>
         </customView>
     </objects>

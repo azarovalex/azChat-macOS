@@ -22,7 +22,7 @@ class ChatVC: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+    } 
     
     override func viewWillAppear() {
         setUpView()
@@ -44,14 +44,21 @@ class ChatVC: NSViewController {
     }
     
     @IBAction func sendMessageBtnClicked(_ sender: Any) {
-        
+        if AuthService.instance.isLoggedIn {
+            // Send message
+        } else {
+            let loginDict: [String: ModalType] = [USER_INFO_MODAL: ModalType.logIn]
+            NotificationCenter.default.post(name: NOTIF_PRESENT_MODAL, object: nil, userInfo: loginDict)
+        }
     }
     
     @objc func dataDidChange(_ nofif: Notification) {
         if AuthService.instance.isLoggedIn {
-            
+            channelTitle.stringValue = "#General"
+            channelDescription.stringValue = "This is were the chat happens."
         } else {
-            
+            channelTitle.stringValue = "Please Log In"
+            channelDescription.stringValue = ""
         }
     }
     

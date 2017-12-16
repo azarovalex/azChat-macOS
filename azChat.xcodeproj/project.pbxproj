@@ -25,6 +25,8 @@
 		DFBC5CE71FDD9A3E0089A6DD /* ModalLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */; };
 		DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */; };
 		DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5D231FDF1B380089A6DD /* NSColor.swift */; };
+		DFD4676A1FE5AED900D01C91 /* ModalProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD467691FE5AED900D01C91 /* ModalProfile.xib */; };
+		DFD4676C1FE5AF0600D01C91 /* ModalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4676B1FE5AF0600D01C91 /* ModalProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLogin.xib; sourceTree = "<group>"; };
 		DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLogin.swift; sourceTree = "<group>"; };
 		DFBC5D231FDF1B380089A6DD /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		DFD467691FE5AED900D01C91 /* ModalProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalProfile.xib; sourceTree = "<group>"; };
+		DFD4676B1FE5AF0600D01C91 /* ModalProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfile.swift; sourceTree = "<group>"; };
 		F28350C2297B5BB459563CE0 /* Pods-azChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-azChat/Pods-azChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,7 @@
 				DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */,
 				DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */,
 				DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */,
+				DFD4676B1FE5AF0600D01C91 /* ModalProfile.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			children = (
 				DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */,
 				DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */,
+				DFD467691FE5AED900D01C91 /* ModalProfile.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 				DF15F9A11FDB371B00D8C1E9 /* Assets.xcassets in Resources */,
 				DF63D93E1FDF511500E128EB /* ModalCreateAccount.xib in Resources */,
 				DFBC5CE71FDD9A3E0089A6DD /* ModalLogin.xib in Resources */,
+				DFD4676A1FE5AED900D01C91 /* ModalProfile.xib in Resources */,
 				DF15F9A41FDB371B00D8C1E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +328,7 @@
 				DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */,
 				DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */,
 				DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */,
+				DFD4676C1FE5AF0600D01C91 /* ModalProfile.swift in Sources */,
 				DF6DA6401FDD898200338F7C /* NSButton.swift in Sources */,
 				DF15F9C11FDB3C4D00D8C1E9 /* Constants.swift in Sources */,
 			);
