@@ -27,6 +27,7 @@
 		DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5D231FDF1B380089A6DD /* NSColor.swift */; };
 		DFD4676A1FE5AED900D01C91 /* ModalProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD467691FE5AED900D01C91 /* ModalProfile.xib */; };
 		DFD4676C1FE5AF0600D01C91 /* ModalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4676B1FE5AF0600D01C91 /* ModalProfile.swift */; };
+		DFD4676E1FE5C61600D01C91 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4676D1FE5C61600D01C91 /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		DFBC5D231FDF1B380089A6DD /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		DFD467691FE5AED900D01C91 /* ModalProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalProfile.xib; sourceTree = "<group>"; };
 		DFD4676B1FE5AF0600D01C91 /* ModalProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfile.swift; sourceTree = "<group>"; };
+		DFD4676D1FE5C61600D01C91 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		F28350C2297B5BB459563CE0 /* Pods-azChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-azChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-azChat/Pods-azChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 			children = (
 				DF3EFD3A1FE09A350002AA0A /* AuthService.swift */,
 				DF3081191FE13A720090DED7 /* UserDataService.swift */,
+				DFD4676D1FE5C61600D01C91 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */,
 				DF15F9B61FDB3A6600D8C1E9 /* ChatVC.swift in Sources */,
 				DF3EFD3B1FE09A350002AA0A /* AuthService.swift in Sources */,
+				DFD4676E1FE5C61600D01C91 /* SocketService.swift in Sources */,
 				DF15F9B01FDB3A3400D8C1E9 /* ToolbarVC.swift in Sources */,
 				DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */,
 				DF15F99D1FDB371B00D8C1E9 /* AppDelegate.swift in Sources */,
