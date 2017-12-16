@@ -51,6 +51,7 @@ class ModalProfile: NSView {
         logoutBtn.styleButtonText(button: logoutBtn, buttonName: "Log out", fontColor: .white, alignment: .center, font: AVENIR_REGULAR, size: 13.0)
         
     }
+    
     @IBAction func logoutBtnClicked(_ sender: Any) {
         UserDataService.instance.logoutUser()
         NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil)
