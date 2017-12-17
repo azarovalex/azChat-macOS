@@ -21,6 +21,10 @@ class ModalCreateAccount: NSView {
     @IBOutlet weak var progressSpinner: NSProgressIndicator!
     @IBOutlet weak var stackView: NSStackView!
     
+    // Variables
+    var avatarName = "profileDefault"
+    var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    let popover = NSPopover()
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -38,6 +42,9 @@ class ModalCreateAccount: NSView {
     }
     
     @IBAction func chooseImgBtnClicked(_ sender: Any) {
+        popover.contentViewController = AvatarPickerVC(nibName: NSNib.Name(rawValue: "AvatarPickerVC"), bundle: nil)
+        popover.show(relativeTo: chooseImgBtn.bounds, of: chooseImgBtn, preferredEdge: .minX)
+        popover.behavior = .transient
         
     }
     

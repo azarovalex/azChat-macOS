@@ -22,6 +22,10 @@
 		DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */; };
 		DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */; };
 		DF6DA6401FDD898200338F7C /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6DA63F1FDD898200338F7C /* NSButton.swift */; };
+		DF831C381FE727B2006AF82F /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C361FE727B2006AF82F /* AvatarPickerVC.swift */; };
+		DF831C391FE727B2006AF82F /* AvatarPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF831C371FE727B2006AF82F /* AvatarPickerVC.xib */; };
+		DF831C3C1FE72BCF006AF82F /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */; };
+		DF831C3D1FE72BCF006AF82F /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF831C3B1FE72BCF006AF82F /* AnimalCell.xib */; };
 		DFBC5CE71FDD9A3E0089A6DD /* ModalLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */; };
 		DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */; };
 		DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5D231FDF1B380089A6DD /* NSColor.swift */; };
@@ -52,6 +56,10 @@
 		DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCreateAccount.swift; sourceTree = "<group>"; };
 		DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickBlockingView.swift; sourceTree = "<group>"; };
 		DF6DA63F1FDD898200338F7C /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
+		DF831C361FE727B2006AF82F /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		DF831C371FE727B2006AF82F /* AvatarPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarPickerVC.xib; sourceTree = "<group>"; };
+		DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		DF831C3B1FE72BCF006AF82F /* AnimalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
 		DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLogin.xib; sourceTree = "<group>"; };
 		DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLogin.swift; sourceTree = "<group>"; };
 		DFBC5D231FDF1B380089A6DD /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
@@ -142,11 +150,13 @@
 		DF15F9AD1FDB39FD00D8C1E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF831C351FE72778006AF82F /* Popover */,
 				DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */,
 				DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */,
 				DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */,
 				DFD4676B1FE5AF0600D01C91 /* ModalProfile.swift */,
 				DFD467711FE5E43600D01C91 /* ModalAddChannel.swift */,
+				DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +188,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		DF831C351FE72778006AF82F /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				DF831C361FE727B2006AF82F /* AvatarPickerVC.swift */,
+				DF831C371FE727B2006AF82F /* AvatarPickerVC.xib */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 		DFBC5CE51FDD9A290089A6DD /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +204,7 @@
 				DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */,
 				DFD467691FE5AED900D01C91 /* ModalProfile.xib */,
 				DFD4676F1FE5E41600D01C91 /* ModalAddChannel.xib */,
+				DF831C3B1FE72BCF006AF82F /* AnimalCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -252,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF15F9A11FDB371B00D8C1E9 /* Assets.xcassets in Resources */,
+				DF831C3D1FE72BCF006AF82F /* AnimalCell.xib in Resources */,
 				DFD467701FE5E41600D01C91 /* ModalAddChannel.xib in Resources */,
+				DF831C391FE727B2006AF82F /* AvatarPickerVC.xib in Resources */,
 				DF63D93E1FDF511500E128EB /* ModalCreateAccount.xib in Resources */,
 				DFBC5CE71FDD9A3E0089A6DD /* ModalLogin.xib in Resources */,
 				DFD4676A1FE5AED900D01C91 /* ModalProfile.xib in Resources */,
@@ -334,10 +356,12 @@
 				DF3EFD3B1FE09A350002AA0A /* AuthService.swift in Sources */,
 				DFD4676E1FE5C61600D01C91 /* SocketService.swift in Sources */,
 				DF15F9B01FDB3A3400D8C1E9 /* ToolbarVC.swift in Sources */,
+				DF831C3C1FE72BCF006AF82F /* AnimalCell.swift in Sources */,
 				DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */,
 				DF15F99D1FDB371B00D8C1E9 /* AppDelegate.swift in Sources */,
 				DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */,
 				DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */,
+				DF831C381FE727B2006AF82F /* AvatarPickerVC.swift in Sources */,
 				DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */,
 				DFD4676C1FE5AF0600D01C91 /* ModalProfile.swift in Sources */,
 				DF6DA6401FDD898200338F7C /* NSButton.swift in Sources */,
