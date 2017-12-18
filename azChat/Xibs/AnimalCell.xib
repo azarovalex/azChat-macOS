@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AnimalCell" customModule="azChat" customModuleProvider="target">
             <connections>
+                <outlet property="animalImg" destination="LiP-hf-lbO" id="XLC-Yp-kgB"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -16,16 +17,20 @@
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LiP-hf-lbO">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LiP-hf-lbO">
                     <rect key="frame" x="26" y="26" width="48" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dark0" id="rT2-so-fbv"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="ccN-ea-CfB"/>
+                        <constraint firstAttribute="width" constant="48" id="fgp-ly-kKZ"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="rT2-so-fbv"/>
                 </imageView>
             </subviews>
+            <constraints>
+                <constraint firstItem="LiP-hf-lbO" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="dz0-u4-RB6"/>
+                <constraint firstItem="LiP-hf-lbO" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="nfb-vL-etv"/>
+            </constraints>
         </customView>
         <collectionViewItem id="EqV-VM-STU" customClass="AnimalCell" customModule="azChat" customModuleProvider="target"/>
     </objects>
-    <resources>
-        <image name="dark0" width="100" height="100"/>
-    </resources>
 </document>

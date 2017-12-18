@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="ModalCreateAccount" customModule="azChat" customModuleProvider="target">
             <connections>
                 <outlet property="chooseImgBtn" destination="NDQ-uN-vJp" id="TQO-yM-JC7"/>
+                <outlet property="colorWell" destination="swM-Ar-KLc" id="MQ1-6d-fqP"/>
                 <outlet property="createAccountBtn" destination="7L4-pX-8F8" id="NPK-Rg-eVV"/>
                 <outlet property="emailTxt" destination="EW6-lz-5Vz" id="cpw-SA-Bp4"/>
                 <outlet property="nameTxt" destination="TYn-Dl-0NK" id="ORL-I0-h8z"/>
@@ -264,6 +265,9 @@
                         <constraint firstAttribute="width" constant="44" id="TaA-GV-n5V"/>
                     </constraints>
                     <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="colorPicked:" target="-2" id="y71-ZD-UCQ"/>
+                    </connections>
                 </colorWell>
             </subviews>
             <constraints>

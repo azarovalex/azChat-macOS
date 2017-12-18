@@ -72,4 +72,33 @@ class UserDataService {
         AuthService.instance.userEmail = ""
         AuthService.instance.isLoggedIn = false
     }
+    
+    func returnCGColor(components: String) -> CGColor {
+//        [0.819260207423994, 0.0, 1.0, 1.0]
+        let scanner = Scanner(string: components)
+        let skipped = CharacterSet(charactersIn: "[], ")
+        let comma = CharacterSet(charactersIn: ",")
+        scanner.charactersToBeSkipped = skipped
+        
+        var r, g, b, a: NSString?
+        
+        scanner.scanUpToCharacters(from: comma, into: &r)
+        scanner.scanUpToCharacters(from: comma, into: &g)
+        scanner.scanUpToCharacters(from: comma, into: &b)
+        scanner.scanUpToCharacters(from: comma, into: &a)
+        
+        let defaulColor = CGColor(red: 0.69, green: 0.85, blue: 0.99, alpha: 1.0)
+        guard let rUnwrapped = r else { return defaulColor }
+        guard let gUnwrapped = g else { return defaulColor }
+        guard let bUnwrapped = b else { return defaulColor }
+        guard let aUnwrapped = a else { return defaulColor }
+        
+        let rFloat = CGFloat(rUnwrapped.doubleValue)
+        let gFloat = CGFloat(gUnwrapped.doubleValue)
+        let bFloat = CGFloat(bUnwrapped.doubleValue)
+        let aFloat = CGFloat(aUnwrapped.doubleValue)
+        
+        let newCGColor = CGColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        return newCGColor
+    }
 }

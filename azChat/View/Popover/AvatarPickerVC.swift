@@ -20,6 +20,7 @@ class AvatarPickerVC: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     @IBOutlet weak var collectionView: NSCollectionView!
     
     // Variables
+    var animalType = AnimalType.light
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
         return 1
@@ -29,20 +30,44 @@ class AvatarPickerVC: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         return 28
     }
     
+    @IBAction func segmentChanged(_ sender: Any) {
+        if segmentControl.selectedSegment == 0 {
+            animalType = .dark
+        } else {
+            animalType = .light
+        }
+        collectionView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        segmentControl.cell?.controlTint = .clearControlTint
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
         return NSMakeSize(85.0, 85.0)
     }
     
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        if let selectedIndexPaths = collectionView.selectionIndexPaths.first {
+            if animalType == .dark {
+                UserDataService.instance.avatarName = "dark\(selectedIndexPaths.item)"
+            } else {
+                UserDataService.instance.avatarName = "light\(selectedIndexPaths.item)"
+            }
+            view.window?.cancelOperation(nil)
+        }
+    }
+    
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let cell = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "AnimalCell"), for: indexPath)
-        return cell
+        guard let animalCell = cell as? AnimalCell else {
+            return NSCollectionViewItem()
+        }
+        animalCell.configureCell(index: indexPath.item, type: animalType)
+        return animalCell
     }
     
 }

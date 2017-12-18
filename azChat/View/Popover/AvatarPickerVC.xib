@@ -27,6 +27,9 @@
                             <segment label="Light" width="60" selected="YES" tag="1"/>
                         </segments>
                     </segmentedCell>
+                    <connections>
+                        <action selector="segmentChanged:" target="-2" id="8Lg-KB-8pN"/>
+                    </connections>
                 </segmentedControl>
                 <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG7-Mv-D2W">
                     <rect key="frame" x="0.0" y="0.0" width="420" height="475"/>
@@ -34,18 +37,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="420" height="475"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView id="dEk-qx-xqV">
+                            <collectionView selectable="YES" id="dEk-qx-xqV">
                                 <rect key="frame" x="0.0" y="0.0" width="420" height="158"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="D4e-OH-xCi">
                                     <size key="itemSize" width="50" height="50"/>
+                                    <edgeInsets key="sectionInset" left="10" right="10" top="0.0" bottom="10"/>
                                 </collectionViewFlowLayout>
                                 <color key="primaryBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             </collectionView>
                         </subviews>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="dLe-0H-tI6">
-                        <rect key="frame" x="1" y="458" width="418" height="16"/>
+                        <rect key="frame" x="0.0" y="459" width="420" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="4IX-e6-gkm">

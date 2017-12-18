@@ -43,7 +43,7 @@ class ModalProfile: NSView {
         profileImg.layer?.borderWidth = 3
         profileImg.layer?.borderColor = NSColor.gray.cgColor
         profileImg.image = NSImage(named: NSImage.Name(rawValue: UserDataService.instance.avatarName))
-        // TODO: Add avatar background color
+        profileImg.layer?.backgroundColor = UserDataService.instance.returnCGColor(components: UserDataService.instance.avatarColor)
         
         logoutBtn.wantsLayer = true
         logoutBtn.layer?.backgroundColor = chatGreen.cgColor

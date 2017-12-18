@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ModalCreateAccount: NSView {
+class ModalCreateAccount: NSView, NSPopoverDelegate {
 
     // Outlets
     @IBOutlet weak var view: NSView!
@@ -20,6 +20,7 @@ class ModalCreateAccount: NSView {
     @IBOutlet weak var chooseImgBtn: NSButton!
     @IBOutlet weak var progressSpinner: NSProgressIndicator!
     @IBOutlet weak var stackView: NSStackView!
+    @IBOutlet weak var colorWell: NSColorWell!
     
     // Variables
     var avatarName = "profileDefault"
@@ -30,6 +31,7 @@ class ModalCreateAccount: NSView {
         super.init(frame: frameRect)
         Bundle.main.loadNibNamed(NSNib.Name(rawValue: "ModalCreateAccount"), owner: self, topLevelObjects: nil)
         self.addSubview(self.view)
+        popover.delegate = self
     }
     
     required init?(coder decoder: NSCoder) {
@@ -48,6 +50,22 @@ class ModalCreateAccount: NSView {
         
     }
     
+    func popoverDidClose(_ notification: Notification) {
+        if UserDataService.instance.avatarName != "" {
+            profileImg.image = NSImage(named: NSImage.Name(rawValue: UserDataService.instance.avatarName))
+            avatarName = UserDataService.instance.avatarName
+        }
+    }
+    @IBAction func colorPicked(_ sender: Any) {
+        profileImg.layer?.backgroundColor = colorWell.color.cgColor
+        let color = colorWell.color.cgColor
+        guard let colorArray = color.components?.description else {
+            return
+        }
+        avatarColor = colorArray
+        print(colorArray)
+    }
+    
     @IBAction func createAccountBtnClicked(_ sender: Any) {
         progressSpinner.isHidden = false
         progressSpinner.startAnimation(nil)
@@ -56,10 +74,11 @@ class ModalCreateAccount: NSView {
         AuthService.instance.registerUser(email: emailTxt.stringValue, password: passwordTxt.stringValue) { (success) in
             if success {
                 AuthService.instance.loginUser(email: self.emailTxt.stringValue, password: self.passwordTxt.stringValue, completion: { (success) in
-                    AuthService.instance.createUser(name: self.nameTxt.stringValue, email:  self.emailTxt.stringValue, avatarName: "dark5", avatarColor: "", completion: { (success) in
+                    AuthService.instance.createUser(name: self.nameTxt.stringValue, email:  self.emailTxt.stringValue, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                         self.progressSpinner.stopAnimation(nil)
                         
                         NotificationCenter.default.post(name: NOTIF_CLOSE_MODAL, object: nil)
+                        NotificationCenter.default.post(name: NOTIF_DATA_CHANGED, object: nil)
                     })
                 })
             }
