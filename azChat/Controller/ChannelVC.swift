@@ -22,6 +22,11 @@ class ChannelVC: NSViewController {
     override func viewWillAppear() {
         setUpView()
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.dataDidChange(_:)), name: NOTIF_DATA_CHANGED, object: nil)
+        MessageSerivce.instance.findAllChannelss { (success) in
+            for channel in MessageSerivce.instance.channels {
+                Swift.print(channel.channelTitle)
+            }
+        }
     }
     
     func setUpView() {

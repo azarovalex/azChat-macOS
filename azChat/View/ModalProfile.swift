@@ -50,6 +50,8 @@ class ModalProfile: NSView {
         logoutBtn.layer?.cornerRadius = 7
         logoutBtn.styleButtonText(button: logoutBtn, buttonName: "Log out", fontColor: .white, alignment: .center, font: AVENIR_REGULAR, size: 13.0)
         
+        userNameTxt.stringValue = UserDataService.instance.name
+        emailTxt.stringValue = UserDataService.instance.email
     }
     
     @IBAction func logoutBtnClicked(_ sender: Any) {

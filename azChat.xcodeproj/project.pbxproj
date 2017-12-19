@@ -26,6 +26,8 @@
 		DF831C391FE727B2006AF82F /* AvatarPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF831C371FE727B2006AF82F /* AvatarPickerVC.xib */; };
 		DF831C3C1FE72BCF006AF82F /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */; };
 		DF831C3D1FE72BCF006AF82F /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF831C3B1FE72BCF006AF82F /* AnimalCell.xib */; };
+		DF831C3F1FE95D5F006AF82F /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C3E1FE95D5F006AF82F /* Channel.swift */; };
+		DF831C411FE95DBF006AF82F /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C401FE95DBF006AF82F /* MessageService.swift */; };
 		DFBC5CE71FDD9A3E0089A6DD /* ModalLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */; };
 		DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */; };
 		DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5D231FDF1B380089A6DD /* NSColor.swift */; };
@@ -60,6 +62,8 @@
 		DF831C371FE727B2006AF82F /* AvatarPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarPickerVC.xib; sourceTree = "<group>"; };
 		DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		DF831C3B1FE72BCF006AF82F /* AnimalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
+		DF831C3E1FE95D5F006AF82F /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = azChat/Xibs/Channel.swift; sourceTree = SOURCE_ROOT; };
+		DF831C401FE95DBF006AF82F /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLogin.xib; sourceTree = "<group>"; };
 		DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLogin.swift; sourceTree = "<group>"; };
 		DFBC5D231FDF1B380089A6DD /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 		DF15F9AE1FDB3A0200D8C1E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF831C3E1FE95D5F006AF82F /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				DF3EFD3A1FE09A350002AA0A /* AuthService.swift */,
 				DF3081191FE13A720090DED7 /* UserDataService.swift */,
 				DFD4676D1FE5C61600D01C91 /* SocketService.swift */,
+				DF831C401FE95DBF006AF82F /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -351,8 +357,10 @@
 			files = (
 				DF15F9BC1FDB3AA600D8C1E9 /* ChannelVC.swift in Sources */,
 				DF30811A1FE13A720090DED7 /* UserDataService.swift in Sources */,
+				DF831C3F1FE95D5F006AF82F /* Channel.swift in Sources */,
 				DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */,
 				DF15F9B61FDB3A6600D8C1E9 /* ChatVC.swift in Sources */,
+				DF831C411FE95DBF006AF82F /* MessageService.swift in Sources */,
 				DF3EFD3B1FE09A350002AA0A /* AuthService.swift in Sources */,
 				DFD4676E1FE5C61600D01C91 /* SocketService.swift in Sources */,
 				DF15F9B01FDB3A3400D8C1E9 /* ToolbarVC.swift in Sources */,
