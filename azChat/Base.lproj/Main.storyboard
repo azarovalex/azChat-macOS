@@ -822,13 +822,13 @@
                                     <action selector="addChannelBtnClicked:" target="L9I-Eg-h7w" id="Bba-Mr-q8S"/>
                                 </connections>
                             </button>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er4-CP-Bio">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er4-CP-Bio">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="221"/>
                                 <clipView key="contentView" id="5DI-xY-X6x">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="221"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="ZVP-5H-lyk">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" id="ZVP-5H-lyk">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="221"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -848,21 +848,26 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="n8T-4p-Ne9">
-                                                            <rect key="frame" x="1" y="1" width="197" height="17"/>
+                                                        <tableCellView identifier="channelCell" id="n8T-4p-Ne9" customClass="ChannelCell" customModule="azChat" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="197" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9A-yA-hai">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="eGs-D8-mBF">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Z9A-yA-hai" userLabel="Channel Name">
+                                                                    <rect key="frame" x="10" y="7" width="60" height="17"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="#channel" id="eGs-D8-mBF">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Z9A-yA-hai" secondAttribute="trailing" constant="20" symbolic="YES" id="Rhh-OA-uou"/>
+                                                                <constraint firstItem="Z9A-yA-hai" firstAttribute="leading" secondItem="n8T-4p-Ne9" secondAttribute="leading" constant="12" id="Upz-Oj-wLk"/>
+                                                                <constraint firstItem="Z9A-yA-hai" firstAttribute="centerY" secondItem="n8T-4p-Ne9" secondAttribute="centerY" id="Zct-Hc-hgJ"/>
+                                                            </constraints>
                                                             <connections>
+                                                                <outlet property="channelName" destination="Z9A-yA-hai" id="0Kc-dt-46d"/>
                                                                 <outlet property="textField" destination="Z9A-yA-hai" id="PE0-Oz-LW7"/>
                                                             </connections>
                                                         </tableCellView>
