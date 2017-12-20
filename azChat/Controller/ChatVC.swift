@@ -20,7 +20,7 @@ class ChatVC: NSViewController {
     @IBOutlet weak var sendMessageBtn: NSButton!
     
     let user = UserDataService.instance
-    
+    var channel: Channel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,16 @@ class ChatVC: NSViewController {
     
     override func viewWillAppear() {
         setUpView()
+    }
+    
+    func updateWithChannel(channel: Channel) {
+        typingUsersLbl.stringValue = ""
+
+        let channelName = channel.channelTitle ?? ""
+        let channelDesc = channel.channelDescription ?? ""
+        
+        channelDescription.stringValue = channelDesc
+        channelTitle.stringValue = "#\(channelName)"
     }
     
     func setUpView() {
