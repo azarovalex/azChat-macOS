@@ -20,8 +20,8 @@ let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel/"
 
 // Colors
-let chatPurple = NSColor(calibratedRed: 255/255, green: 0xeb/0xff, blue: 0xee/0xff, alpha: 1)
-let chatGreen = NSColor.hexColor(rgbValue: 0xe57373)
+let chatLightRed = NSColor(calibratedRed: 255/255, green: 0xeb/0xff, blue: 0xee/0xff, alpha: 1)
+let chatRed = NSColor.hexColor(rgbValue: 0xe57373)
 
 // Fonts
 let AVENIR_REGULAR = "AvenirNext-Regular"
