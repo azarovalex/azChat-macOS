@@ -32,12 +32,14 @@ class ChatVC: NSViewController {
     
     func updateWithChannel(channel: Channel) {
         typingUsersLbl.stringValue = ""
-
+        
+        self.channel = channel
         let channelName = channel.channelTitle ?? ""
         let channelDesc = channel.channelDescription ?? ""
         
         channelDescription.stringValue = channelDesc
         channelTitle.stringValue = "#\(channelName)"
+        getChats()
     }
     
     func setUpView() {
@@ -55,9 +57,18 @@ class ChatVC: NSViewController {
         sendMessageBtn.styleButtonText(button: sendMessageBtn, buttonName: "Send", fontColor: .systemGray, alignment: .center, font: AVENIR_REGULAR, size: 13.0)
     }
     
+    func getChats() {
+        guard let channelId = channel?.id else { return }
+        MessageSerivce.instance.findAllMessagesForChat(channelId: channelId) { (success) in
+            for message in MessageSerivce.instance.messages {
+                print(message.message)
+            }
+        }
+    }
+    
     @IBAction func sendMessageBtnClicked(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
-            let channelId = "592cd40e39179c0023f3531f"
+            guard let channelId = channel?.id else { return }
             SocketService.instance.addMessage(messageBody: messageText.stringValue, userId: user.id, channelId: channelId, completion: { (success) in
                 if success {
                     self.messageText.stringValue = ""

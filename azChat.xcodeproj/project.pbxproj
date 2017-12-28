@@ -18,6 +18,7 @@
 		DF15F9C11FDB3C4D00D8C1E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */; };
 		DF30811A1FE13A720090DED7 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3081191FE13A720090DED7 /* UserDataService.swift */; };
 		DF3EFD3B1FE09A350002AA0A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3EFD3A1FE09A350002AA0A /* AuthService.swift */; };
+		DF42643A1FF43DA000AA2936 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4264391FF43DA000AA2936 /* Message.swift */; };
 		DF63D93E1FDF511500E128EB /* ModalCreateAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */; };
 		DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */; };
 		DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */; };
@@ -26,9 +27,9 @@
 		DF831C391FE727B2006AF82F /* AvatarPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF831C371FE727B2006AF82F /* AvatarPickerVC.xib */; };
 		DF831C3C1FE72BCF006AF82F /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */; };
 		DF831C3D1FE72BCF006AF82F /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF831C3B1FE72BCF006AF82F /* AnimalCell.xib */; };
-		DF831C3F1FE95D5F006AF82F /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C3E1FE95D5F006AF82F /* Channel.swift */; };
 		DF831C411FE95DBF006AF82F /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C401FE95DBF006AF82F /* MessageService.swift */; };
 		DF831C431FE977EC006AF82F /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF831C421FE977EC006AF82F /* ChannelCell.swift */; };
+		DF97C74F1FF43DF200322DD0 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97C74E1FF43DF200322DD0 /* Channel.swift */; };
 		DFBC5CE71FDD9A3E0089A6DD /* ModalLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */; };
 		DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */; };
 		DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC5D231FDF1B380089A6DD /* NSColor.swift */; };
@@ -55,6 +56,7 @@
 		DF15F9C01FDB3C4D00D8C1E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DF3081191FE13A720090DED7 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		DF3EFD3A1FE09A350002AA0A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DF4264391FF43DA000AA2936 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalCreateAccount.xib; sourceTree = "<group>"; };
 		DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCreateAccount.swift; sourceTree = "<group>"; };
 		DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickBlockingView.swift; sourceTree = "<group>"; };
@@ -63,9 +65,9 @@
 		DF831C371FE727B2006AF82F /* AvatarPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarPickerVC.xib; sourceTree = "<group>"; };
 		DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		DF831C3B1FE72BCF006AF82F /* AnimalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
-		DF831C3E1FE95D5F006AF82F /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = azChat/Xibs/Channel.swift; sourceTree = SOURCE_ROOT; };
 		DF831C401FE95DBF006AF82F /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		DF831C421FE977EC006AF82F /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		DF97C74E1FF43DF200322DD0 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		DFBC5CE61FDD9A3E0089A6DD /* ModalLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLogin.xib; sourceTree = "<group>"; };
 		DFBC5CE81FDD9A820089A6DD /* ModalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLogin.swift; sourceTree = "<group>"; };
 		DFBC5D231FDF1B380089A6DD /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
@@ -171,7 +173,8 @@
 		DF15F9AE1FDB3A0200D8C1E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF831C3E1FE95D5F006AF82F /* Channel.swift */,
+				DF97C74E1FF43DF200322DD0 /* Channel.swift */,
+				DF4264391FF43DA000AA2936 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,7 +363,6 @@
 			files = (
 				DF15F9BC1FDB3AA600D8C1E9 /* ChannelVC.swift in Sources */,
 				DF30811A1FE13A720090DED7 /* UserDataService.swift in Sources */,
-				DF831C3F1FE95D5F006AF82F /* Channel.swift in Sources */,
 				DFBC5CE91FDD9A820089A6DD /* ModalLogin.swift in Sources */,
 				DF831C431FE977EC006AF82F /* ChannelCell.swift in Sources */,
 				DF15F9B61FDB3A6600D8C1E9 /* ChatVC.swift in Sources */,
@@ -372,9 +374,11 @@
 				DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */,
 				DF15F99D1FDB371B00D8C1E9 /* AppDelegate.swift in Sources */,
 				DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */,
+				DF97C74F1FF43DF200322DD0 /* Channel.swift in Sources */,
 				DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */,
 				DF831C381FE727B2006AF82F /* AvatarPickerVC.swift in Sources */,
 				DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */,
+				DF42643A1FF43DA000AA2936 /* Message.swift in Sources */,
 				DFD4676C1FE5AF0600D01C91 /* ModalProfile.swift in Sources */,
 				DF6DA6401FDD898200338F7C /* NSButton.swift in Sources */,
 				DF15F9C11FDB3C4D00D8C1E9 /* Constants.swift in Sources */,
