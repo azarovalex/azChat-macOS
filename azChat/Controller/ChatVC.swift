@@ -9,7 +9,7 @@
 import Cocoa
 
 class ChatVC: NSViewController {
-
+    
     // Outlets
     @IBOutlet weak var channelTitle: NSTextField!
     @IBOutlet weak var channelDescription: NSTextField!
@@ -24,6 +24,8 @@ class ChatVC: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
     } 
     
     override func viewWillAppear() {
@@ -60,9 +62,7 @@ class ChatVC: NSViewController {
     func getChats() {
         guard let channelId = channel?.id else { return }
         MessageSerivce.instance.findAllMessagesForChat(channelId: channelId) { (success) in
-            for message in MessageSerivce.instance.messages {
-                print(message.message)
-            }
+            self.tableView.reloadData()
         }
     }
     
@@ -90,4 +90,25 @@ class ChatVC: NSViewController {
         }
     }
     
+}
+
+
+extension ChatVC: NSTableViewDelegate, NSTableViewDataSource {
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return MessageSerivce.instance.messages.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "chatCell"), owner: nil) as? ChatCell {
+            let chat = MessageSerivce.instance.messages[row]
+            cell.configureCell(chat: chat)
+            return cell
+        }
+        return NSTableCellView()
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 100.0
+    }
 }
