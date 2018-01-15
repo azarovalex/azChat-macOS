@@ -32,6 +32,10 @@ class ChatVC: NSViewController {
         setUpView()
     }
     
+    @IBAction func messageEnterSend(_ sender: Any) {
+        sendMessageBtn.performClick(nil)
+    }
+    
     func updateWithChannel(channel: Channel) {
         typingUsersLbl.stringValue = ""
         

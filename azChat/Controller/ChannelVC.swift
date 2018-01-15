@@ -33,7 +33,14 @@ class ChannelVC: NSViewController {
     
     override func viewDidAppear() {
         chatVC = self.view.window?.contentViewController?.childViewControllers[0].childViewControllers[1] as? ChatVC
-        
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+                if MessageSerivce.instance.channels.count > 0 {
+                    self.tableView.selectRowIndexes(IndexSet(integer: self.selectedChannelIndex), byExtendingSelection: false)
+                }
+            }
+        }
     }
     
     func setUpView() {
@@ -46,6 +53,9 @@ class ChannelVC: NSViewController {
         MessageSerivce.instance.findAllChannelss { (success) in
             if success {
                 self.tableView.reloadData()
+                if MessageSerivce.instance.channels.count > 0 {
+                    self.tableView.selectRowIndexes(IndexSet(integer: self.selectedChannelIndex), byExtendingSelection: false)
+                }
             }
         }
     }
