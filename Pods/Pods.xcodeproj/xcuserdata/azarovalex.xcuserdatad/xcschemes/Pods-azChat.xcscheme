@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3473B9063CC2B19AB3BDE213E52A34B"
+               BlueprintIdentifier = "96ED1F1C7DB8A7D3C23362832F2F9FDE"
                BuildableName = "Pods_azChat.framework"
                BlueprintName = "Pods-azChat"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3473B9063CC2B19AB3BDE213E52A34B"
+            BlueprintIdentifier = "96ED1F1C7DB8A7D3C23362832F2F9FDE"
             BuildableName = "Pods_azChat.framework"
             BlueprintName = "Pods-azChat"
             ReferencedContainer = "container:Pods.xcodeproj">
