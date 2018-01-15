@@ -71,6 +71,8 @@ class UserDataService {
         AuthService.instance.authToken = ""
         AuthService.instance.userEmail = ""
         AuthService.instance.isLoggedIn = false
+        MessageSerivce.instance.clearMessages()
+        MessageSerivce.instance.clearChannels()
     }
     
     func returnCGColor(components: String) -> CGColor {

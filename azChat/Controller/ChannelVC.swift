@@ -75,6 +75,7 @@ class ChannelVC: NSViewController {
             usernameLbl.stringValue = UserDataService.instance.name
             getChannels()
         } else {
+            tableView.reloadData()
             usernameLbl.stringValue = ""
         }
     }

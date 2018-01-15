@@ -30,6 +30,15 @@ class ChatVC: NSViewController {
     
     override func viewWillAppear() {
         setUpView()
+        NotificationCenter.default.addObserver(self, selector: #selector (ChatVC.dataDidChange(_:)), name: NOTIF_DATA_CHANGED, object: nil)
+        
+        SocketService.instance.getChatMessage { (newMessage) in
+            if newMessage.channelId == self.channel?.id && AuthService.instance.isLoggedIn {
+                MessageSerivce.instance.messages.append(newMessage)
+                self.tableView.reloadData()
+                self.tableView.scrollRowToVisible(MessageSerivce.instance.messages.count - 1)
+            }
+        }
     }
     
     @IBAction func messageEnterSend(_ sender: Any) {
@@ -67,6 +76,7 @@ class ChatVC: NSViewController {
         guard let channelId = channel?.id else { return }
         MessageSerivce.instance.findAllMessagesForChat(channelId: channelId) { (success) in
             self.tableView.reloadData()
+            self.tableView.scrollRowToVisible(MessageSerivce.instance.messages.count - 1)
         }
     }
     
@@ -86,11 +96,15 @@ class ChatVC: NSViewController {
     
     @objc func dataDidChange(_ nofif: Notification) {
         if AuthService.instance.isLoggedIn {
-            channelTitle.stringValue = "#General"
-            channelDescription.stringValue = "This is were the chat happens."
+            if MessageSerivce.instance.channels.count == 0 {
+                channelTitle.stringValue = "Create a channel and get chatting!"
+            }
         } else {
             channelTitle.stringValue = "Please Log In"
             channelDescription.stringValue = ""
+            typingUsersLbl.stringValue = ""
+            tableView.reloadData()
+            
         }
     }
     
