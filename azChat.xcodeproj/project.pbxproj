@@ -19,6 +19,7 @@
 		DF30811A1FE13A720090DED7 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3081191FE13A720090DED7 /* UserDataService.swift */; };
 		DF3EFD3B1FE09A350002AA0A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3EFD3A1FE09A350002AA0A /* AuthService.swift */; };
 		DF42643A1FF43DA000AA2936 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4264391FF43DA000AA2936 /* Message.swift */; };
+		DF49604C200CEB6B00EACBA0 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49604B200CEB6B00EACBA0 /* SplitView.swift */; };
 		DF63D93E1FDF511500E128EB /* ModalCreateAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */; };
 		DF63D9401FDF512B00E128EB /* ModalCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */; };
 		DF6DA63E1FDD80F500338F7C /* ClickBlockingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */; };
@@ -58,6 +59,7 @@
 		DF3081191FE13A720090DED7 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		DF3EFD3A1FE09A350002AA0A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DF4264391FF43DA000AA2936 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		DF49604B200CEB6B00EACBA0 /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		DF63D93D1FDF511500E128EB /* ModalCreateAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalCreateAccount.xib; sourceTree = "<group>"; };
 		DF63D93F1FDF512B00E128EB /* ModalCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCreateAccount.swift; sourceTree = "<group>"; };
 		DF6DA63D1FDD80F500338F7C /* ClickBlockingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickBlockingView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				DF831C3A1FE72BCF006AF82F /* AnimalCell.swift */,
 				DF831C421FE977EC006AF82F /* ChannelCell.swift */,
 				DFDE45E92006ABD000E792C5 /* ChatCell.swift */,
+				DF49604B200CEB6B00EACBA0 /* SplitView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				DF97C74F1FF43DF200322DD0 /* Channel.swift in Sources */,
 				DFBC5D241FDF1B380089A6DD /* NSColor.swift in Sources */,
 				DF831C381FE727B2006AF82F /* AvatarPickerVC.swift in Sources */,
+				DF49604C200CEB6B00EACBA0 /* SplitView.swift in Sources */,
 				DF15F9BE1FDB3BAA00D8C1E9 /* MainWindowController.swift in Sources */,
 				DF42643A1FF43DA000AA2936 /* Message.swift in Sources */,
 				DFD4676C1FE5AF0600D01C91 /* ModalProfile.swift in Sources */,
