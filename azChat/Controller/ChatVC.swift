@@ -29,6 +29,7 @@ class ChatVC: NSViewController {
     } 
     
     override func viewWillAppear() {
+        if UserDataService.instance.isMinimazing { return }
         setUpView()
         NotificationCenter.default.addObserver(self, selector: #selector (ChatVC.dataDidChange(_:)), name: NOTIF_DATA_CHANGED, object: nil)
         
